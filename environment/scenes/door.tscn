@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmx53do4shcxt"]
+
+[ext_resource type="Script" uid="uid://rtnbmo5krfmh" path="res://environment/scripts/door_test.gd" id="1_p6wm4"]
+[ext_resource type="Script" uid="uid://1ccen2e62jmm" path="res://systems/interactable_component.gd" id="2_bia4p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6eaj"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bhbee"]
+size = Vector2(8, 8)
+
+[node name="Door" type="Node2D" node_paths=PackedStringArray("interactable_component")]
+script = ExtResource("1_p6wm4")
+interactable_component = NodePath("InteractableComponent")
+
+[node name="InteractableComponent" type="Area2D" parent="."]
+script = ExtResource("2_bia4p")
+metadata/_custom_type_script = "uid://1ccen2e62jmm"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+shape = SubResource("RectangleShape2D_m6eaj")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_bhbee")

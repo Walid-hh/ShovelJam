@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://b0ixk2hpexd3q"]
+[gd_scene load_steps=2 format=3 uid="uid://b0ixk2hpexd3q"]
+
+[ext_resource type="Script" uid="uid://24lnpfjgyq82" path="res://ai/scripts/derek.gd" id="1_7vhyi"]
 
 [node name="Derek" type="Node2D"]
+script = ExtResource("1_7vhyi")

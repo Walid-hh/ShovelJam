@@ -1,3 +1,18 @@
-[gd_scene format=3 uid="uid://rgcyiggnkohl"]
+[gd_scene load_steps=4 format=3 uid="uid://rgcyiggnkohl"]
 
-[node name="Ghost" type="Node2D"]
+[ext_resource type="Script" uid="uid://67wv3dfj8dwj" path="res://player/scripts/ghost.gd" id="1_xfaxx"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xfaxx"]
+size = Vector2(8, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfaxx"]
+size = Vector2(8, 8)
+
+[node name="Player" type="Area2D"]
+script = ExtResource("1_xfaxx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_xfaxx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xfaxx")
